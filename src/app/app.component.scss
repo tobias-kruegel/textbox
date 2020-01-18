@@ -1,0 +1,28 @@
+.textbox {
+
+  border: 1px solid lightgrey;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.5rem 0.4rem 0.5rem;
+
+  &.focused {
+    border-color: lightskyblue;
+  }
+
+  textarea {
+    line-height: 2rem;
+    font-size: 1.4rem;
+    padding: 0;
+    resize: none;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    border: 1px solid greenyellow;
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+
+}
+
