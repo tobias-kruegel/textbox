@@ -8,6 +8,10 @@
     border-color: lightskyblue;
   }
 
+  label {
+    display: none;
+  }
+
   textarea {
     line-height: 2rem;
     font-size: 1.4rem;
@@ -16,7 +20,6 @@
     width: 100%;
     border: none;
     box-shadow: none;
-    border: 1px solid greenyellow;
 
     &:focus {
       outline: none;
