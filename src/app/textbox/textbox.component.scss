@@ -1,11 +1,18 @@
+$textSize: 1.4rem;
+$radius: 0.5rem;
+
 .textbox {
 
-  border: 1px solid lightgrey;
-  border-radius: 0.5rem;
+  border: 0.1rem solid lightgrey;
+  border-radius: $radius;
   padding: 0.6rem 0.5rem 0.4rem 0.5rem;
 
   &.focused {
     border-color: lightskyblue;
+  }
+
+  &.error {
+    border-color: red;
   }
 
   label {
@@ -13,8 +20,8 @@
   }
 
   textarea {
-    line-height: 1.4rem;
-    font-size: 1.4rem;
+    line-height: $textSize;
+    font-size: $textSize;
     padding: 0;
     resize: none;
     width: 100%;

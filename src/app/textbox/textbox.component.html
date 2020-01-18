@@ -1,8 +1,7 @@
-<div class="textbox" [class.focused]="isFocused">
+<div class="textbox" [class.focused]="!isError && isFocused" [class.error]="isError">
   <label for="textarea"></label>
   <textarea #textarea id="textarea" rows="1"
     (input)="onInput($event)"
     (focus)="onFocus($event)"
-    (blur)="onBlur($event)"
-    (keydown)="onKeyDown($event)"></textarea>
+    (blur)="onBlur($event)"></textarea>
 </div>
