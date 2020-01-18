@@ -10,6 +10,8 @@ export class TextboxComponent implements OnInit, AfterViewInit {
   @ViewChild('textarea', { static: false }) textarea: ElementRef;
   @Input() maxRows: number;
   @Input() maxLength: number;
+  @Input() placeholder: string;
+  @Input() value: string;
 
   public isFocused = false;
   public isError = false;
@@ -23,6 +25,7 @@ export class TextboxComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.lineHeight = parseFloat(getComputedStyle(this.textarea.nativeElement, null).getPropertyValue('line-height'));
+    this.textarea.nativeElement.value = this.value;
   }
 
   public onInput() {
