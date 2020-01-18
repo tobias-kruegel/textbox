@@ -1,9 +1,2 @@
-<div class="textbox" [class.focused]="isFocused">
-  <label for="textarea"></label>
-  <textarea #textarea id="textarea" rows="1"
-    (input)="onInput($event)"
-    (focus)="onFocus($event)"
-    (blur)="onBlur($event)"
-    (keydown)="onKeyDown($event)"></textarea>
-</div>
 
+<mydatev-textbox [maxRows]="3" [maxLength]="10"></mydatev-textbox>
