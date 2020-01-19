@@ -4,7 +4,7 @@ $radius: 0.5rem;
 
   border: 0.1rem solid lightgrey;
   border-radius: $radius;
-  padding: 0.6rem 0.5rem 0.4rem 0.5rem;
+  padding: 1rem;
 
   &.focused {
     border-color: lightskyblue;
@@ -20,7 +20,6 @@ $radius: 0.5rem;
 
   textarea {
     line-height: 1.4rem;
-    font-size: 1.4rem;
     padding: 0;
     margin: 0;
     resize: none;
