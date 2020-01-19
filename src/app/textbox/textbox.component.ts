@@ -8,6 +8,7 @@ import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit } from '
 export class TextboxComponent implements OnInit, AfterViewInit {
 
   @ViewChild('textarea', { static: false }) textarea: ElementRef;
+  @ViewChild('textbox', { static: false }) textbox: ElementRef;
   @Input() maxRows: number;
   @Input() maxLength: number;
   @Input() placeholder: string;
@@ -28,6 +29,7 @@ export class TextboxComponent implements OnInit, AfterViewInit {
     this.textarea.nativeElement.style.lineHeight = this.lineHeight + 'px';
     this.textarea.nativeElement.style.fontSize = (this.lineHeight - 4) + 'px';
     this.textarea.nativeElement.style.height = this.lineHeight + 'px';
+    this.textbox.nativeElement.style.height = this.lineHeight + 'px';
     this.textarea.nativeElement.value = this.value;
   }
 
@@ -41,7 +43,7 @@ export class TextboxComponent implements OnInit, AfterViewInit {
     }
     // this.textarea.nativeElement.setAttribute('rows', rows.toString());
     this.textarea.nativeElement.style.height = (rows * this.lineHeight) + 'px';
-    // this.textarea.nativeElement.style.padding = '4px';
+    this.textbox.nativeElement.style.height = (rows * this.lineHeight) + 'px';
     this.isError = this.textarea.nativeElement.value.length > this.maxLength;
   }
 

@@ -1,5 +1,4 @@
-<div class="textbox" [class.focused]="!isError && isFocused" [class.error]="isError">
-
+<div #textbox class="textbox" [class.focused]="!isError && isFocused" [class.error]="isError">
   <label for="textarea"></label>
   <textarea #textarea id="textarea" rows="1"
     [placeholder]="placeholder"
